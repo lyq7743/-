@@ -1,7 +1,5 @@
 <template>
   <div class="itemWarp" @click="fn1" :class="{active:falg}">
-    <!--<img src="../assets/ic_tab_home_normal.png" alt="" />
-    <img src="../assets/ic_tab_home_active.png" alt="" />  -->
     <span v-show='!falg'><slot name='normalImg'></slot></span>
     <span v-show='falg'><slot name='activeImg'></slot></span>
     <br />
