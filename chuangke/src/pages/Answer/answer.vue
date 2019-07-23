@@ -1,10 +1,11 @@
 <template>
-  <div class="hello">
-
+  <div class="Home">
+    问答
   </div>
 </template>
 
 <script>
+
 export default {
 
 }

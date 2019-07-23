@@ -1,10 +1,11 @@
 <template>
-  <div class="hello">
-
+  <div class="Home">
+    班级
   </div>
 </template>
 
 <script>
+
 export default {
 
 }
