@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-    班级
+    班级123
   </div>
 </template>
 

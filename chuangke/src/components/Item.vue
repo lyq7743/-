@@ -23,7 +23,7 @@ export default {
 	methods:{
 		fn1(){
 			this.$emit('change',this.mark);
-			this.$router.push({path:'/'+this.mark});
+			// this.$router.push({path:'/'+this.mark});
 		}
 	}
 }
