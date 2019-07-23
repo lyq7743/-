@@ -1,13 +1,16 @@
 <template>
-  <div class="Home">
-    问答
+  <div class="AnswerWarp">
+   <Answer></Answer>
   </div>
 </template>
 
 <script>
+  import Answer from '../../components/Answer'
 
 export default {
-
+  components:{
+    Answer
+  }
 }
 </script>
 

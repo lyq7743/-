@@ -1,15 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Class from '../pages/Class/class.vue'
-import Home from '../pages/Home/home.vue'
+import Home from '@/pages/Home/home'
+import Class from '@/pages/Class/class'
+import Answer from '@/pages/Answer/answer'
+import Mine from '@/pages/Mine/mine'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [{
+  routes: [
+    {
       path: '/',
       name: 'Home',
+      component: Home
+    },
+    {
+      path: '/home',
+      name: 'Home1',
       component: Home
     },
     {
@@ -17,5 +25,15 @@ export default new Router({
       name: 'Class',
       component: Class
     },
+    {
+      path: '/answer',
+      name: 'Answer',
+      component: Answer
+    },
+    {
+      path: '/mine',
+      name: 'Mine',
+      component: Mine
+    }
   ]
 })
