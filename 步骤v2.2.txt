@@ -1,0 +1,164 @@
+一、安装和配置
+    官网：https://git-scm.com/
+    安装完后右键查看是否有两个git....菜单
+
+    配置：
+    git config --global user.name "hedyLi"
+    git config --global user.email "lihanying_vin@163.com"
+
+    git config --list   查看配置
+
+二、Git基本操作
+    git init
+
+    常用命令：
+             git status                查看状态
+             git add 文件名            将文件添加到暂存区
+             git commit -m 描述信息    将文件添加到本地仓库中
+             git diff                  对比文件内容
+             git log  ， git log --pretty=oneline  查看历史提交
+             git reset --hard HEAD^
+             git reset --hard 版本号   版本回退·
+             git reflog                查看历史     
+
+
+    修改场景1：撤销工作区修改 
+               git checkout 文件名称
+
+    修改场景2：撤销暂存区内容  
+               暂存->工作区   git reset HEAD  文件名
+               执行场景1操作  git checkout 文件名
+
+    修改场景3：撤销master仓库内容
+               git reset --hard HEAD^  
+               或者
+               git reset --hard 版本号
+                
+
+    删除文件：
+                已提交到仓库，工作区不小心删除 ，git checkout test.txt
+    
+                已提交到仓库，但是需要将仓库的也删除掉
+                    >先删除工作区的
+                    >git rm test.txt
+                    >git commit -m 描述信息
+                  
+
+三、远程仓库
+    生成SSH：ssh-keygen -t rsa -C "lihanying_vin@163.com"      执行过程中需要敲回车
+
+    执行完之后本地用户目录会多出一个.shh文件夹  （C:\Users\kawa）   [注意把文件后缀显示出来，才可以看到pub]
+    
+    登录github网站，点击头像，settings，SSH and GPG keys，
+
+    点击“NEW SSH key” 输入title,key的值粘贴本地id_rsa.pub文件内所有内容 保存。
+
+
+
+     两种情况：
+     情况1： 本地已经有一个仓库，现需要将本地仓库关联github上的仓库
+    
+             打开github，找到头像下第二个菜单（your repositories），
+             点击"NEW",输入仓库名及描述点击保存。
+
+ 
+git remote add origin git@github.com:hedyLi/demo010722.git  关联 （可能会有提示，输入yes）
+git push -u origin master 推送（第一次需要-u）
+
+
+     情况2： 直接先在github创建仓库，本地进行clone
+             打开github，找到头像下第二个菜单（your repositories），
+             点击"NEW",输入仓库名及描述，注意勾选上
+             Initialize this repository with a README。 点击create
+
+
+	     本地找个文件夹，进入git命令 执行 git clone  复制的ssh地址
+             注意进入到具体的项目地址 ，再重复add,commit ...
+
+
+
+作业：
+
+1.熟练掌握git命令 ， 明天上课前15分钟内提前部署好。 
+
+  场景： 服务器创建一个仓库
+         本地clone
+         在本地仓库中添加上小组静态项目所有文件
+         增加一个说明文档内容带上自己名字并push到github中
+        
+         邮件中提供ssh地址git@github.com:hedyLi/demo030722.git
+
+
+2.观看视频学习node第五章 express框架 提交示例 （jade模板部分[选看]）
+
+
+
+
+-----------------------分支管理------------------------
+各个分支之间相互独立不影响
+git branch          查看分支
+git branch 名称     创建分支
+git checkout 名称   切换分支
+git checkout -b 名称   创建并切换分支
+git merge 名称      合并分支
+git branch -d 名称
+
+
+
+
+#master 和 dev 分支 都修改同一个文件，并且add,commit到各自的仓库中， 在master中进行合并，需要手动解决冲突，重新add,commit#
+
+
+git log --graph --pretty=oneline
+
+
+------------------------标签管理tag-------------------------
+git tag 名称       创建标签
+git tag -a 名称 -m 描述
+git tag            查看标签
+git show 名称      查看标签说明
+git tag -d 名称    删除标签
+git push origin 标签名称    推送一个标签
+git push origin --tags      推送所有未推送的标签
+git push origin :refs/tags/标签名    删除远程仓库标签
+
+
+-----------------团队开发---------------------
+push  推送
+pull  拉取
+
+master
+
+进行pull，push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
