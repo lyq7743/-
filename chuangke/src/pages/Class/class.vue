@@ -2,6 +2,7 @@
   <div class="Class">
     <img src="../../../static/img/class1.png" />
 	<img src="../../../static/img/class2.png">
+	
   </div>
 </template>
 
